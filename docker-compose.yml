@@ -1,0 +1,9 @@
+services:
+  app:
+    image: elixir:1.13-alpine
+    entrypoint: ./entrypoint.sh
+    command: mix employee employee_data.csv 2020-06-25
+    init: true
+    working_dir: /app
+    volumes:
+      - ".:/app"
